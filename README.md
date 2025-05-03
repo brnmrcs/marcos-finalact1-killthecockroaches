@@ -29,44 +29,7 @@ To install the game as a PWA:
 2. Look for the install icon in the address bar or menu
 3. Click "Install" to add the game to your device
 
-## Project Structure
 
-```
-/
-├── index.html          # Main HTML file
-├── style.css           # CSS styles
-├── app.js              # Game logic
-├── service-worker.js   # Offline functionality
-├── manifest.json       # PWA configuration
-├── README.md           # Documentation
-├── images/             # Game images
-│   ├── cockroach.png
-│   ├── dead-cockroach.png
-│   ├── floor-background.jpg
-│   ├── slipper-cursor.png
-│   ├── sound-on.png
-│   └── sound-off.png
-├── sounds/             # Game audio
-│   ├── background-music.mp3
-│   └── squish.mp3
-└── icons/              # App icons
-    ├── icon-72x72.png
-    ├── icon-96x96.png
-    ├── icon-128x128.png
-    ├── icon-144x144.png
-    ├── icon-152x152.png
-    ├── icon-192x192.png
-    ├── icon-384x384.png
-    └── icon-512x512.png
-```
-
-## Deployment
-
-This game is deployed using GitHub Pages. You can access it at the following URL:
-
-https://[YourGitHubUsername]/Lastname-finalact1-killthecockroaches
-
-## Development
 
 To run this project locally:
 
@@ -76,7 +39,3 @@ To run this project locally:
 4. Make your changes and test locally
 5. Push to GitHub to update the live version
 
-## Credits
-
-- Game developed as a final activity project
-- Sound effects and images are royalty-free
