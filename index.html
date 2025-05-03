@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kill The Cockroaches</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icons/icon-192x192.png">
+    <meta name="theme-color" content="#333333">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <div class="offline-message" id="offlineMessage">
+        <p>You are currently offline. Game functionality may be limited.</p>
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div class="game-info">
+                <div class="timer">Time: <span id="timer">60</span>s</div>
+                <div class="score">Score: <span id="score">0</span></div>
+            </div>
+            <div class="game-controls">
+                <button id="soundToggle" class="control-btn">
+                    <img src="images/sound-on.png" alt="Sound" id="soundIcon">
+                </button>
+            </div>
+        </div>
+
+        <div class="spawn-notification" id="spawnNotification">
+            <p>Cockroaches spawning increases! Kill them faster!</p>
+        </div>
+
+        <div class="game-area" id="gameArea">
+            <!-- Cockroaches will be added here dynamically -->
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <h1>Kill The Cockroaches</h1>
+            <button id="startBtn">Start Game</button>
+            <p>Click on cockroaches to kill them!</p>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h2>Game Over!</h2>
+            <p>Your score: <span id="finalScore">0</span></p>
+            <button id="restartBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Register service worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker registered', reg))
+                .catch(err => console.log('Service Worker registration failed', err));
+        }
+    </script>
+</body>
+</html>
